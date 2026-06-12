@@ -54,12 +54,18 @@ const projectSteps = [
 
 <template>
   <div>
-    <section class="relative overflow-hidden border-b border-border">
-      <div class="absolute inset-x-0 top-0 -z-10 h-80 bg-[radial-gradient(circle_at_top_left,var(--muted),transparent_45%)]" />
+    <section class="border-border relative overflow-hidden border-b">
+      <div
+        class="absolute inset-x-0 top-0 -z-10 h-80 bg-[radial-gradient(circle_at_top_left,var(--muted),transparent_45%)]"
+      />
 
-      <div class="mx-auto grid min-h-[calc(100vh-4rem)] max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_26rem] lg:px-8">
+      <div
+        class="mx-auto grid min-h-[calc(100vh-4rem)] max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_26rem] lg:px-8"
+      >
         <div class="max-w-3xl space-y-8">
-          <div class="inline-flex rounded-full border border-border bg-background/80 px-3 py-1 text-sm text-muted-foreground shadow-xs">
+          <div
+            class="border-border bg-background/80 text-muted-foreground inline-flex rounded-full border px-3 py-1 text-sm shadow-xs"
+          >
             Static-first Nuxt starter for client work
           </div>
 
@@ -67,8 +73,9 @@ const projectSteps = [
             <h1 class="text-4xl font-semibold tracking-tight text-balance sm:text-6xl">
               Launch polished marketing sites without rebuilding the foundation.
             </h1>
-            <p class="max-w-2xl text-lg leading-8 text-muted-foreground">
-              A reusable Nuxt, Tailwind CSS, and shadcn-vue base for landing pages, small marketing sites, and simple content projects.
+            <p class="text-muted-foreground max-w-2xl text-lg leading-8">
+              A reusable Nuxt, Tailwind CSS, and shadcn-vue base for landing pages, small marketing
+              sites, and simple content projects.
             </p>
           </div>
 
@@ -82,14 +89,13 @@ const projectSteps = [
           </div>
         </div>
 
-        <aside class="rounded-2xl border border-border bg-card p-5 text-card-foreground shadow-sm">
-          <div class="rounded-xl border border-border bg-muted/40 p-4">
-            <p class="text-sm font-medium text-muted-foreground">Starter brief</p>
-            <h2 class="mt-3 text-2xl font-semibold tracking-tight">
-              Freelance landing page
-            </h2>
-            <p class="mt-3 text-sm leading-6 text-muted-foreground">
-              Static output, SEO defaults, reusable UI, and a simple path from client brief to deployable site.
+        <aside class="border-border bg-card text-card-foreground rounded-2xl border p-5 shadow-sm">
+          <div class="border-border bg-muted/40 rounded-xl border p-4">
+            <p class="text-muted-foreground text-sm font-medium">Starter brief</p>
+            <h2 class="mt-3 text-2xl font-semibold tracking-tight">Freelance landing page</h2>
+            <p class="text-muted-foreground mt-3 text-sm leading-6">
+              Static output, SEO defaults, reusable UI, and a simple path from client brief to
+              deployable site.
             </p>
           </div>
 
@@ -97,19 +103,17 @@ const projectSteps = [
             <span
               v-for="item in stackItems"
               :key="item"
-              class="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground"
+              class="border-border text-muted-foreground rounded-full border px-3 py-1 text-xs"
             >
               {{ item }}
             </span>
           </div>
 
-          <ol class="mt-6 space-y-3 text-sm text-muted-foreground">
-            <li
-              v-for="(step, index) in projectSteps"
-              :key="step"
-              class="flex gap-3"
-            >
-              <span class="flex size-6 shrink-0 items-center justify-center rounded-full bg-primary text-xs text-primary-foreground">
+          <ol class="text-muted-foreground mt-6 space-y-3 text-sm">
+            <li v-for="(step, index) in projectSteps" :key="step" class="flex gap-3">
+              <span
+                class="bg-primary text-primary-foreground flex size-6 shrink-0 items-center justify-center rounded-full text-xs"
+              >
                 {{ index + 1 }}
               </span>
               <span>{{ step }}</span>
@@ -121,14 +125,13 @@ const projectSteps = [
 
     <section id="features" class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
       <div class="max-w-2xl space-y-4">
-        <p class="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">
-          Features
-        </p>
+        <p class="text-muted-foreground text-sm font-medium tracking-[0.2em] uppercase">Features</p>
         <h2 class="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
           The basics every small marketing site needs.
         </h2>
-        <p class="text-lg leading-8 text-muted-foreground">
-          Keep the starter lean, understandable, and easy to reshape for each client instead of fighting a large opinionated template.
+        <p class="text-muted-foreground text-lg leading-8">
+          Keep the starter lean, understandable, and easy to reshape for each client instead of
+          fighting a large opinionated template.
         </p>
       </div>
 
@@ -136,27 +139,30 @@ const projectSteps = [
         <article
           v-for="feature in features"
           :key="feature.title"
-          class="rounded-xl border border-border bg-card p-6 text-card-foreground shadow-xs"
+          class="border-border bg-card text-card-foreground rounded-xl border p-6 shadow-xs"
         >
           <h3 class="font-semibold">{{ feature.title }}</h3>
-          <p class="mt-3 text-sm leading-6 text-muted-foreground">
+          <p class="text-muted-foreground mt-3 text-sm leading-6">
             {{ feature.description }}
           </p>
         </article>
       </div>
     </section>
 
-    <section class="border-y border-border bg-muted/30">
-      <div class="mx-auto grid max-w-6xl items-center gap-8 px-4 py-16 sm:px-6 md:grid-cols-[1fr_auto] lg:px-8">
+    <section class="border-border bg-muted/30 border-y">
+      <div
+        class="mx-auto grid max-w-6xl items-center gap-8 px-4 py-16 sm:px-6 md:grid-cols-[1fr_auto] lg:px-8"
+      >
         <div class="max-w-2xl space-y-3">
-          <p class="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">
+          <p class="text-muted-foreground text-sm font-medium tracking-[0.2em] uppercase">
             Reuse the foundation
           </p>
           <h2 class="text-3xl font-semibold tracking-tight text-balance">
             Start each client build from a clean, static-ready base.
           </h2>
           <p class="text-muted-foreground">
-            Keep the stack predictable while leaving enough room for custom sections, integrations, and brand direction.
+            Keep the stack predictable while leaving enough room for custom sections, integrations,
+            and brand direction.
           </p>
         </div>
 
@@ -171,29 +177,31 @@ const projectSteps = [
       </div>
     </section>
 
-    <section id="contact" class="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_24rem] lg:px-8">
+    <section
+      id="contact"
+      class="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_24rem] lg:px-8"
+    >
       <div class="max-w-3xl space-y-5">
-        <p class="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">
-          Contact
-        </p>
+        <p class="text-muted-foreground text-sm font-medium tracking-[0.2em] uppercase">Contact</p>
         <h2 class="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
           Swap this placeholder into a real intake flow.
         </h2>
-        <p class="text-lg leading-8 text-muted-foreground">
-          Use a simple mailto link, a booking page, or a form provider depending on the client. The starter keeps contact intentionally provider-agnostic.
+        <p class="text-muted-foreground text-lg leading-8">
+          Use a simple mailto link, a booking page, or a form provider depending on the client. The
+          starter keeps contact intentionally provider-agnostic.
         </p>
       </div>
 
-      <aside class="rounded-xl border border-border bg-card p-6 text-card-foreground shadow-xs">
+      <aside class="border-border bg-card text-card-foreground rounded-xl border p-6 shadow-xs">
         <h3 class="font-semibold">Project inquiries</h3>
-        <p class="mt-3 text-sm leading-6 text-muted-foreground">
+        <p class="text-muted-foreground mt-3 text-sm leading-6">
           Replace the placeholder address with the client or studio inbox before launch.
         </p>
         <Button as-child class="mt-6 w-full">
           <a href="mailto:hello@example.com">Email hello@example.com</a>
         </Button>
-        <div class="mt-6 border-t border-border pt-6 text-sm text-muted-foreground">
-          <p class="font-medium text-foreground">Best for</p>
+        <div class="border-border text-muted-foreground mt-6 border-t pt-6 text-sm">
+          <p class="text-foreground font-medium">Best for</p>
           <p class="mt-2 leading-6">
             Landing pages, small content sites, service pages, and focused launch campaigns.
           </p>

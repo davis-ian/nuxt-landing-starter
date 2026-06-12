@@ -62,7 +62,9 @@ const { count } = toRefs(state);
 export function useCounter(initial = 0) {
   const count = ref(initial);
   const increment = () => count.value++;
-  const reset = () => { count.value = initial; };
+  const reset = () => {
+    count.value = initial;
+  };
   return { count: readonly(count), increment, reset };
 }
 ```
@@ -80,9 +82,7 @@ export function useCounter(initial = 0) {
 // stores/useCartStore.ts
 export const useCartStore = defineStore("cart", () => {
   const items = ref<Product[]>([]);
-  const total = computed(() =>
-    items.value.reduce((sum, item) => sum + item.price, 0)
-  );
+  const total = computed(() => items.value.reduce((sum, item) => sum + item.price, 0));
   function add(product: Product) {
     items.value.push(product);
   }
@@ -181,17 +181,17 @@ type ApiResponse =
 
 Use built-in utility types. Do not rewrite them.
 
-| Utility          | Purpose                              |
-| ---------------- | ------------------------------------ |
-| `Partial<T>`     | All fields optional                  |
-| `Required<T>`    | All fields required                  |
-| `Readonly<T>`    | All fields readonly                  |
-| `Pick<T, K>`     | Subset of fields                     |
-| `Omit<T, K>`     | All fields except K                  |
-| `Record<K, V>`   | Map from key type to value type      |
+| Utility          | Purpose                               |
+| ---------------- | ------------------------------------- |
+| `Partial<T>`     | All fields optional                   |
+| `Required<T>`    | All fields required                   |
+| `Readonly<T>`    | All fields readonly                   |
+| `Pick<T, K>`     | Subset of fields                      |
+| `Omit<T, K>`     | All fields except K                   |
+| `Record<K, V>`   | Map from key type to value type       |
 | `ReturnType<T>`  | Extract the return type of a function |
-| `Parameters<T>`  | Extract parameter types as a tuple   |
-| `NonNullable<T>` | Remove null and undefined            |
+| `Parameters<T>`  | Extract parameter types as a tuple    |
+| `NonNullable<T>` | Remove null and undefined             |
 
 ### Generics
 

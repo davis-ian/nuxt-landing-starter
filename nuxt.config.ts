@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
 
-  modules: ["shadcn-nuxt"],
+  modules: ["@nuxt/eslint", "shadcn-nuxt"],
   shadcn: {
     prefix: "",
     componentDir: "@/components/ui",
